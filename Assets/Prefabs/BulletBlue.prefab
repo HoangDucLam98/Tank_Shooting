@@ -118,6 +118,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitEffect: {fileID: 7902426510538227383, guid: 651536ac6338c32448acaa367b577220,
     type: 3}
+  damge: 30
 --- !u!61 &-2088770291863113779
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -135,7 +136,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.5, y: 0.9}
+    oldSize: {x: 0.33333334, y: 0.6}
     newSize: {x: 0.5, y: 0.9}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
