@@ -49,5 +49,33 @@ public class EnemyFollowPlayer : MonoBehaviour
         if( other.gameObject.CompareTag("Player") ) {
             other.gameObject.GetComponent<Player>().TakeDamge(damge);
         }
+        if( other.gameObject.CompareTag("Red Bullet") ) {
+            StartCoroutine(Burn());
+        }
+        if( other.gameObject.CompareTag("Blue Bullet") ) {
+            slowSpeed();
+        }
+        if( other.gameObject.CompareTag("Green Bullet") ) {
+            GameObject.FindGameObjectWithTag("Player").gameObject.GetComponent<Player>().TakeHealth(
+                GameObject.FindGameObjectWithTag("Green Bullet").gameObject.GetComponent<Bullet>().damge/7
+            );
+        }
     }
+
+    public void slowSpeed()
+    {
+        if( moveSpeed > .5f )
+            moveSpeed -= .5f;
+    }
+
+    IEnumerator Burn()
+    {
+        int count = 0;
+        while( count < 4 ) {
+            TakeDamge(damge/2);
+            count++;
+            yield return new WaitForSeconds(1f);
+        }
+    }
+
 }

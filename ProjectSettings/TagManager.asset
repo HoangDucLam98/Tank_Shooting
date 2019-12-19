@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enermy
+  - Blue Bullet
+  - Green Bullet
+  - Red Bullet
   layers:
   - Default
   - TransparentFX

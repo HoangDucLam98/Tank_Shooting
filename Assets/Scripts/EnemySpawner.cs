@@ -23,5 +23,9 @@ public class EnemySpawner : MonoBehaviour
             yield return new WaitForSeconds(.5f);
             enemyCount++;
         }
+
+        yield return new WaitForSeconds(8f);
+        enemyCount = 0;
+        StartCoroutine(enemyDrop());
     }
 }

@@ -31,6 +31,16 @@ public class Player : MonoBehaviour
         }
     }
 
+    public void TakeHealth(float healthIns)
+    {
+        Debug.Log(healthIns);
+        health += healthIns;
+        if( health > startHealth ) {
+            health = startHealth;
+        }
+        healthBar.fillAmount = health/startHealth;
+    }
+
     private void Die()
     {
         GameObject effect = Instantiate(deadEffect, transform.position, transform.rotation);
